@@ -104,9 +104,22 @@ def get_alert(job_value, year_value):
 # Nav Bar
 sidebar = html.Div(
     [
-        html.Img(src=app.get_asset_url(r'C:\Users\hpc\Desktop\dash\Dash_proj\logo.png'),
-                 style={'height': '10px', 'margin-right': 10,'margin-bottom':8}),
-        html.Hr(),
+        html.Div([
+            html.H2([
+                html.Img(
+                    src="https://r2.erweima.ai/imgcompressed/compressed_2532a1b290576b140583e05240259d45.webp",
+                    style={'height': '60px', 'margin-right': '3px','borderRadius': '40%'}),
+                "AI Stats"
+            ], style={
+                'display': 'flex',
+                'align-items': 'center',  # Align items vertically in the flex container
+                'font-size': '20px',
+                'font-weight': '700',  # Adjust font weight as needed (400 to 700)
+                'color': '#0288D1',  # Adjust text color as needed
+                'font-family': 'Dancing Script, cursive',  # Specify custom font
+            })
+        ], 
+        className="display-4"),
         dbc.Nav(
             [
                 dbc.NavLink(k, href=f"{v}",
